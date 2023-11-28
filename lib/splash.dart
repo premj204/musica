@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import 'first_page.dart';
-// import 'bottom_navbar.dart';
 
 class SpalshScrren extends StatefulWidget {
   const SpalshScrren({super.key});

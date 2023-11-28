@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:musica/forgetpassword.dart';
 import 'package:musica/signup.dart';
 
-import 'home.dart';
+import 'bottom_navbar.dart';
+
 // import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class First_Page extends StatelessWidget {
@@ -194,7 +195,7 @@ class First_Page extends StatelessWidget {
                                                   context,
                                                   MaterialPageRoute(
                                                       builder: (context) =>
-                                                          (const HomePage())),
+                                                          (const BottomTabpage())),
                                                 );
                                               },
                                               child: const Text(
