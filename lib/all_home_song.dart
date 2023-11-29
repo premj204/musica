@@ -74,9 +74,9 @@ class AllHomeSong extends StatelessWidget {
                                 shrinkWrap: true,
                                 gridDelegate:
                                     const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 4,
+                                  crossAxisCount: 2,
                                   // crossAxisSpacing: 0.9,
-                                  childAspectRatio: 1,
+                                  childAspectRatio: 0.8,
                                 ),
                                 itemBuilder: (context, index) {
                                   return Container(
@@ -86,14 +86,22 @@ class AllHomeSong extends StatelessWidget {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.asset(
-                                            "assets/all/badan_pe_sitee.jpg",
-                                            width: 60.0,
-                                            height: 60.0,
-                                            fit: BoxFit.fill,
+                                        Container(
+                                          decoration: BoxDecoration(boxShadow: [
+                                            BoxShadow(
+                                                color: Colors.grey.shade600,
+                                                spreadRadius: 1,
+                                                blurRadius: 15)
+                                          ]),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(8),
+                                            child: Image.asset(
+                                              "assets/all/badan_pe_sitee.jpg",
+                                              width: 160.0,
+                                              height: 160.0,
+                                              fit: BoxFit.fill,
+                                            ),
                                           ),
                                         ),
                                         const SizedBox(
@@ -102,7 +110,7 @@ class AllHomeSong extends StatelessWidget {
                                         Text(
                                           "${AllHomeSongData[index]['name']}",
                                           style: const TextStyle(
-                                            fontSize: 12,
+                                            fontSize: 14,
                                           ),
                                         )
                                       ],

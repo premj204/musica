@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 List<Map> SeetingData = [
   {
-    'name': 'Birthday',
+    'name': 'Profile',
     'image': 'assets/illustrator/birthday.png',
     'class': (),
   },

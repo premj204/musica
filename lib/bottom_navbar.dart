@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:musica/favourite.dart';
 import 'package:musica/setting.dart';
 
 import 'home.dart';
+import 'playlists.dart';
+import 'searchpage.dart';
 
 class BottomTabpage extends StatefulWidget {
   const BottomTabpage({super.key});
@@ -14,10 +17,10 @@ class _BottomTabpageState extends State<BottomTabpage> {
   int currenttab = 0;
   List<Map> tabsData = [
     {'name': 'Home', 'class': const HomePage()},
-    {'name': 'Playlists', 'class': ()},
-    {'name': 'search', 'class': ()},
-    {'name': 'favourite', 'class': ()},
-    {'name': 'setting', 'class': SettingPage()},
+    {'name': 'Playlists', 'class': PlayList()},
+    {'name': 'search', 'class': const Search_Page()},
+    {'name': 'favourite', 'class': const FavouritePage()},
+    {'name': 'setting', 'class': const SettingPage()},
   ];
   List<IconData> icons = [
     Icons.home_outlined,

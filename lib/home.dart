@@ -264,14 +264,16 @@ class HomePage extends StatelessWidget {
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
                                         children: [
-                                          ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(8),
-                                            child: Image.asset(
-                                              "assets/all/Gulabi_Aankhen.jpg",
-                                              width: 150.0,
-                                              height: 100.0,
-                                              fit: BoxFit.cover,
+                                          Container(
+                                            child: ClipRRect(
+                                              borderRadius:
+                                                  BorderRadius.circular(8),
+                                              child: Image.asset(
+                                                "assets/all/Gulabi_Aankhen.jpg",
+                                                width: 150.0,
+                                                height: 100.0,
+                                                fit: BoxFit.cover,
+                                              ),
                                             ),
                                           ),
                                           const SizedBox(
@@ -763,21 +765,29 @@ class HomePage extends StatelessWidget {
                                 ],
                               ),
                               InkWell(
-                                onTap: () {},
+                                onTap: () {
+                                  // Navigator.push(
+                                  //   context,
+                                  //   MaterialPageRoute(
+                                  //       builder: (context) =>
+                                  //           (const SongPlayPage())),
+                                  // );
+                                },
                                 child: Padding(
-                                    padding: const EdgeInsets.all(1.0),
-                                    child: ProgressBar(
-                                      barHeight: 7,
-                                      progressBarColor: const Color(0xffFF3566),
-                                      baseBarColor: const Color(0xffFF3566)
-                                          .withOpacity(0.24),
-                                      bufferedBarColor: const Color(0xffFF3566)
-                                          .withOpacity(0.24),
-                                      thumbColor: const Color(0xffFF3566),
-                                      progress: const Duration(minutes: 2),
-                                      buffered: const Duration(minutes: 2),
-                                      total: const Duration(minutes: 5),
-                                    )),
+                                  padding: const EdgeInsets.all(1.0),
+                                  child: ProgressBar(
+                                    barHeight: 7,
+                                    progressBarColor: const Color(0xffFF3566),
+                                    baseBarColor: const Color(0xffFF3566)
+                                        .withOpacity(0.24),
+                                    bufferedBarColor: const Color(0xffFF3566)
+                                        .withOpacity(0.24),
+                                    thumbColor: const Color(0xffFF3566),
+                                    progress: const Duration(minutes: 2),
+                                    buffered: const Duration(minutes: 2),
+                                    total: const Duration(minutes: 5),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
