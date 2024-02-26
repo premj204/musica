@@ -97,32 +97,31 @@ class FavouritePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffFF3566),
+      appBar: AppBar(
+        leading: Container(),
+        leadingWidth: 0,
+        backgroundColor: Colors.black,
+        // backgroundColor: const Color(0xffFF3566),
+        title: Text("Favourites",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            )),
+      ),
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
             child: Column(
               children: [
-                const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Favourites",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            )),
-                      ]),
-                ),
                 Container(
                   decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(30),
-                          topRight: Radius.circular(30))),
+                    color: Colors.black,
+                    // borderRadius: BorderRadius.only(
+                    //     topLeft: Radius.circular(30),
+                    //     topRight: Radius.circular(30)),
+                  ),
                   child: SingleChildScrollView(
                     controller: ScrollController(),
                     scrollDirection: Axis.vertical,
@@ -151,18 +150,21 @@ class FavouritePage extends StatelessWidget {
                                     title: Text(
                                       "${FavouriteData[index]['name']}",
                                       style: const TextStyle(
+                                          color: Colors.white,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
                                     subtitle: Text(
                                       "${FavouriteData[index]['sub_name']}",
                                       style: const TextStyle(
+                                          color: Colors.white,
                                           fontWeight: FontWeight.w400,
                                           fontSize: 14),
                                     ),
                                     trailing: Icon(
                                       Icons.more_vert,
                                       size: 20.0,
+                                      color: Colors.white,
                                     ),
                                   ),
                                 ),

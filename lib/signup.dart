@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:musica/first_page.dart';
 
-import 'home.dart';
-
 class SignUp_page extends StatelessWidget {
   const SignUp_page({super.key});
 
@@ -157,7 +155,7 @@ class SignUp_page extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => (HomePage())),
+                                    builder: (context) => (First_Page())),
                               );
                             },
                             child: const Text(

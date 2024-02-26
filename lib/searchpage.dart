@@ -97,7 +97,7 @@ class Search_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffFF3566),
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
@@ -106,7 +106,7 @@ class Search_Page extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(left: 16, right: 16),
                   decoration: const BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.black,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30))),
@@ -169,12 +169,14 @@ class Search_Page extends StatelessWidget {
                                   title: Text(
                                     "${SearchData[index]['name']}",
                                     style: const TextStyle(
+                                        color: Colors.white,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14),
                                   ),
                                   subtitle: Text(
                                     "${SearchData[index]['sub_name']}",
                                     style: const TextStyle(
+                                        color: Colors.white,
                                         fontWeight: FontWeight.w400,
                                         fontSize: 14),
                                   ),

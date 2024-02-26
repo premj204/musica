@@ -59,9 +59,9 @@ class AllSingerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffFF3566),
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: const Color(0xffFF3566),
+        backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -85,7 +85,7 @@ class AllSingerPage extends StatelessWidget {
               children: [
                 Container(
                   decoration: const BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.black,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30))),
@@ -130,13 +130,13 @@ class AllSingerPage extends StatelessWidget {
                                       child: Column(
                                         children: [
                                           Container(
-                                            decoration:
-                                                BoxDecoration(boxShadow: [
-                                              BoxShadow(
-                                                  color: Colors.grey.shade600,
-                                                  spreadRadius: 1,
-                                                  blurRadius: 15)
-                                            ]),
+                                            // decoration:
+                                            //     BoxDecoration(boxShadow: [
+                                            //   BoxShadow(
+                                            //       color: Colors.grey.shade600,
+                                            //       spreadRadius: 1,
+                                            //       blurRadius: 15)
+                                            // ]),
                                             child: ClipRRect(
                                               borderRadius:
                                                   BorderRadius.circular(10),
@@ -155,6 +155,7 @@ class AllSingerPage extends StatelessWidget {
                                             "${recentlyData[index]['name']}",
                                             textAlign: TextAlign.start,
                                             style: const TextStyle(
+                                              color: Colors.white,
                                               fontSize: 14,
                                             ),
                                             maxLines: 2,

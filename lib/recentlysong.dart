@@ -24,9 +24,9 @@ class AllHomeSong extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffFF3566),
+      backgroundColor: Colors.black,
       appBar: AppBar(
-        backgroundColor: const Color(0xffFF3566),
+        backgroundColor: Colors.black,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -36,7 +36,7 @@ class AllHomeSong extends StatelessWidget {
         ),
         title: const Text(
           textAlign: TextAlign.center,
-          "Popular Songs",
+          "Recenly Songs",
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -50,7 +50,7 @@ class AllHomeSong extends StatelessWidget {
               children: [
                 Container(
                   decoration: const BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.black,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(30),
                           topRight: Radius.circular(30))),
@@ -74,7 +74,7 @@ class AllHomeSong extends StatelessWidget {
                                 shrinkWrap: true,
                                 gridDelegate:
                                     const SliverGridDelegateWithFixedCrossAxisCount(
-                                  crossAxisCount: 2,
+                                  crossAxisCount: 3,
                                   // crossAxisSpacing: 0.9,
                                   childAspectRatio: 0.8,
                                 ),
@@ -87,19 +87,13 @@ class AllHomeSong extends StatelessWidget {
                                           CrossAxisAlignment.start,
                                       children: [
                                         Container(
-                                          decoration: BoxDecoration(boxShadow: [
-                                            BoxShadow(
-                                                color: Colors.grey.shade600,
-                                                spreadRadius: 1,
-                                                blurRadius: 15)
-                                          ]),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8),
                                             child: Image.asset(
                                               "assets/all/badan_pe_sitee.jpg",
-                                              width: 160.0,
-                                              height: 160.0,
+                                              width: 100.0,
+                                              height: 100.0,
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -110,6 +104,7 @@ class AllHomeSong extends StatelessWidget {
                                         Text(
                                           "${AllHomeSongData[index]['name']}",
                                           style: const TextStyle(
+                                            color: Colors.white,
                                             fontSize: 14,
                                           ),
                                         )

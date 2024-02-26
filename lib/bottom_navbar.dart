@@ -44,7 +44,7 @@ class _BottomTabpageState extends State<BottomTabpage> {
         shape: const CircularNotchedRectangle(),
         child: Container(
           decoration: const BoxDecoration(
-            color: Colors.white,
+            color: Colors.black,
 
             // borderRadius: BorderRadius.only(
             //     topLeft: Radius.circular(35),
@@ -66,7 +66,7 @@ class _BottomTabpageState extends State<BottomTabpage> {
                     Icon(
                       size: 25,
                       icons[i],
-                      color: currenttab == i ? const Color(0xffFF3566) : null,
+                      color: currenttab == i ? Colors.red : null,
                     ),
                   ],
                 ),
